@@ -1,0 +1,3 @@
+import pose_prediction.nearest_neighbor_predictor
+
+get_pose_predictor.pose_predictor_cls = @NearestNeighborPredictor

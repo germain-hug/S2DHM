@@ -1,0 +1,20 @@
+import network.network
+import image_retrieval.rank_images
+
+# Image Retrieval Network Config
+ImageRetrievalModel.num_clusters = 64
+ImageRetrievalModel.encoder_dim = 512
+
+# Input image size and resizing
+IMAGE_SIZE = 512
+compute_embedding.image_size = %IMAGE_SIZE
+compute_embedding.preserve_ratio = True
+compute_hypercolumn.image_size = %IMAGE_SIZE
+compute_hypercolumn.resize = True
+
+
+# The hypercolumn layer indices
+ImageRetrievalModel.hypercolumn_layers = [14, 17, 21, 24, 28]
+
+# Misc.
+compute_ranks.use_pca = True

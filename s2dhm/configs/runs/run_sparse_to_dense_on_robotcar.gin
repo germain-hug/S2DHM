@@ -1,0 +1,13 @@
+import visualization.plot_correspondences
+
+include 'configs/datasets/robotcar.gin'
+include 'configs/network/network.gin'
+include 'configs/pose_prediction/sparse_to_dense_pose_prediction.gin'
+
+# Pre-trained model weights
+ImageRetrievalModel.checkpoint_path = '../checkpoints/robotcar/weights.pth.tar'
+SparseToDensePredictor.output_filename = '../results/robotcar/sparse_to_dense_predictions.txt'
+
+# Image logs
+plot_correspondences.plot_correspondences.export_folder = '../logs/sparse_to_dense/correspondences/robotcar/'
+plot_correspondences.plot_image_retrieval.export_folder = '../logs/sparse_to_dense/nearest_neighbor/robotcar/'

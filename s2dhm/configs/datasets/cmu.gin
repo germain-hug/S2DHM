@@ -1,0 +1,20 @@
+import datasets.cmu_dataset
+
+# Extended CMU Dataset Config
+get_dataset_loader.dataset_loader_cls = @cmu_dataset.ExtendedCMUDataset()
+
+CMU_SLICES = ['slice2', 'slice3', 'slice4', 'slice5',
+              'slice6', 'slice7', 'slice8', 'slice9',
+              'slice10', 'slice11', 'slice12', 'slice13',
+              'slice14', 'slice15', 'slice16', 'slice17',
+              'slice18', 'slice19', 'slice20', 'slice21',
+              'slice22', 'slice23', 'slice24', 'slice25']
+
+ExtendedCMUDataset.root = '/home/hugo/Dropbox/Extended-CMU-Seasons-public/'
+ExtendedCMUDataset.image_folder = ''
+ExtendedCMUDataset.reference_sequences = %CMU_SLICES
+ExtendedCMUDataset.query_sequences = %CMU_SLICES
+ExtendedCMUDataset.database_folder = 'database'
+ExtendedCMUDataset.queries_folder = 'query'
+
+# Nb: 3D models and triangulation files are found dynamically at runtime

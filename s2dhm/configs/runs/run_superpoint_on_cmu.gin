@@ -1,0 +1,8 @@
+import visualization.plot_correspondences
+
+include 'configs/datasets/cmu.gin'
+include 'configs/network/network.gin'
+include 'configs/pose_prediction/superpoint_prediction.gin'
+
+# Pre-trained model weights
+ImageRetrievalModel.checkpoint_path = '../checkpoints/cmu/weights.pth.tar'

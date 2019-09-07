@@ -1,0 +1,14 @@
+import visualization.plot_correspondences
+
+include 'configs/datasets/robotcar.gin'
+include 'configs/network/network.gin'
+include 'configs/pose_prediction/superpoint_prediction.gin'
+
+# Pre-trained model weights
+ImageRetrievalModel.checkpoint_path = '../checkpoints/robotcar/weights.pth.tar'
+SuperPointPredictor.output_filename = '../results/robotcar/superpoint_predictions.txt'
+
+# Image logs
+plot_correspondences.plot_correspondences.export_folder = '../logs/superpoint/robotcar/'
+plot_correspondences.plot_detections.export_folder = '../logs/superpoint/detections/robotcar/'
+plot_correspondences.plot_image_retrieval.export_folder = '../logs/superpoint/nearest_neighbor/robotcar/'

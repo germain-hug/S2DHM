@@ -1,0 +1,16 @@
+import pose_prediction.superpoint_predictor
+import pose_prediction.solve_pnp
+
+# SuperPoint Parameters
+get_pose_predictor.pose_predictor_cls = @SuperPointPredictor
+SuperPointPredictor.top_N = 15
+SuperPointPredictor.weights_path = 'third_party/SuperPointPretrainedNetwork/superpoint_v1.pth'
+SuperPointPredictor.nms_dist = 4
+SuperPointPredictor.conf_thresh = 0.005
+SuperPointPredictor.nn_thresh = 0.7
+SuperPointPredictor.ratio = 0.9
+
+# PnP Parameters
+solve_pnp.reprojection_threshold = 12.0
+solve_pnp.minimum_inliers = 12
+solve_pnp.minimum_matches = 5

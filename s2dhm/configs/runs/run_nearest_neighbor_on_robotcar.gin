@@ -1,0 +1,7 @@
+include 'configs/datasets/robotcar.gin'
+include 'configs/network/network.gin'
+include 'configs/pose_prediction/nearest_neighbor_pose_prediction.gin'
+
+# Pre-trained model weights
+ImageRetrievalModel.checkpoint_path = '../checkpoints/robotcar/weights.pth.tar'
+NearestNeighborPredictor.output_filename = '../results/robotcar/top_1_predictions.txt'
