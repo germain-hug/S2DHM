@@ -20,7 +20,7 @@ The proposed approach __was ranked 2nd in the visual localization challenge__ of
 Run the following commands to install this repository and the required dependencies:
 
 ```bash
-git clone https://github.com/germain-hug/S2D_Hypercolumn_Matching.git
+git clone https://github.com/germain-hug/S2DHM.git
 cd S2D_Hypercolumn_Matching/
 git submodule update --init --recursive
 pip3 install -r requirements.txt
