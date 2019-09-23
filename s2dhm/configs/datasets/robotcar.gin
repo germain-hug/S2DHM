@@ -2,11 +2,11 @@ import datasets.robotcar_dataset
 
 # RobotCar Dataset Config
 get_dataset_loader.dataset_loader_cls = @robotcar_dataset.RobotCarDataset()
-ROBOTCAR_ROOT = '/home/hugo/Documents/datasets/RobotCar/'
+ROBOTCAR_ROOT = 'path/to/robotcar/dataset/'
 RobotCarDataset.name = 'robotcar'
 RobotCarDataset.root = %ROBOTCAR_ROOT
 RobotCarDataset.image_folder = 'images/'
 RobotCarDataset.reference_sequences = ['overcast-reference']
 RobotCarDataset.query_sequences = ['dawn', 'dusk', 'night', 'night-rain', 'overcast-summer', 'overcast-winter', 'rain', 'snow', 'sun']
-RobotCarDataset.nvm_model = '/home/hugo/Documents/datasets/RobotCar/all.nvm'
+RobotCarDataset.nvm_model = 'path/to/all.nvm'
 RobotCarDataset.triangulation_data_file = '../data/triangulation/robotcar_triangulation.npz'
