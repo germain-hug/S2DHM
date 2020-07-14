@@ -134,7 +134,7 @@ class BaseDataset():
             data (intrinsics matrix, distortion coefficients, 2D and 3D points)
         """
         assert os.path.isfile(self._data['triangulation_data_file'])
-        triangulation_data = np.load(self._data['triangulation_data_file'])
+        triangulation_data = np.load(self._data['triangulation_data_file'], allow_pickle=True)
         filename_to_local_reconstruction = dict()
         for filename in self._data['reference_image_names']:
             key = self.key_converter(filename)
