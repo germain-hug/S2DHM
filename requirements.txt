@@ -1,3 +1,7 @@
 numpy
 opencv-python
 gin-config
+scikit-learn
+scipy
+matplotlib
+pandas
